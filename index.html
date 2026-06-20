@@ -1,76 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Welcome to the Web </title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to the Web</title>
 
-        header {
-            background-color: #333;
-            padding: 15px;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
 
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
+body{
+    background:#f4f4f4;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
+/* Navigation Bar */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#333;
+    padding:15px 0;
+    transition:0.3s;
+    z-index:1000;
+}
 
-        nav a:hover {
-            color: yellow;
-        }
+nav{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+}
 
-        .container {
-            width: 80%;
-            margin: 40px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-        }
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.3s;
+}
 
-        h1 {
-            color: #333;
-        }
+nav a:hover{
+    color:yellow;
+}
 
-        label {
-            display: block;
-            margin-top: 15px;
-            font-weight: bold;
-        }
+/* Main Content */
+.container{
+    width:80%;
+    max-width:600px;
+    margin:120px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
 
-        input {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-        }
+h1{
+    text-align:center;
+    margin-bottom:10px;
+}
 
-        button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #333;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
+p{
+    text-align:center;
+    margin-bottom:20px;
+}
 
-        button:hover {
-            background-color: #555;
-        }
-    </style>
+label{
+    display:block;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    width:100%;
+    margin-top:20px;
+    padding:12px;
+    background:#333;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#555;
+}
+
+.footer{
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+}
+</style>
 </head>
+
 <body>
 
-<header>
+<header id="navbar">
     <nav>
         <a href="#">Home</a>
         <a href="#">Settings</a>
@@ -80,20 +116,43 @@
 </header>
 
 <div class="container">
-    <h1>Welcome to the Web </h1>
+    <h1>Welcome to the Web</h1>
     <p>It's a practicing web.</p>
 
-    <label for="name">Name</label>
-    <input type="text" id="name" placeholder="Enter your name">
+    <label>Name</label>
+    <input type="text" placeholder="Enter your name">
 
-    <label for="product">Type of Product</label>
-    <input type="text" id="product" placeholder="Enter product type">
+    <label>Type of Product</label>
+    <input type="text" placeholder="Enter product type">
 
-    <label for="cost">Cost</label>
-    <input type="number" id="cost" placeholder="Enter product cost">
+    <label>Cost</label>
+    <input type="number" placeholder="Enter product cost">
 
-    <button>Submit</button>
+    <button onclick="submitForm()">Submit</button>
 </div>
+
+<div class="footer">
+    <p>Created for Web Development Practice</p>
+</div>
+
+<script>
+// Navbar color change on scroll
+window.addEventListener("scroll", function(){
+    let navbar = document.getElementById("navbar");
+
+    if(window.scrollY > 50){
+        navbar.style.backgroundColor = "black";
+    }
+    else{
+        navbar.style.backgroundColor = "#333";
+    }
+});
+
+// Submit button
+function submitForm(){
+    alert("Form Submitted Successfully!");
+}
+</script>
 
 </body>
 </html>
