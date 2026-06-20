@@ -1,5 +1,99 @@
-<section class="hero">
-    <h1>Welcome to My Website</h1>
-    <p>Creating Modern and Responsive Web Experiences</p>
-    <a href="#about" class="btn">Get Started</a>
-</section>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to the Web Anto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            padding: 15px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        .container {
+            width: 80%;
+            margin: 40px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Settings</a>
+        <a href="#">Help</a>
+        <a href="#">Menu</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>Welcome to the Web Anto</h1>
+    <p>It's a practicing web.</p>
+
+    <label for="name">Name</label>
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <label for="product">Type of Product</label>
+    <input type="text" id="product" placeholder="Enter product type">
+
+    <label for="cost">Cost</label>
+    <input type="number" id="cost" placeholder="Enter product cost">
+
+    <button>Submit</button>
+</div>
+
+</body>
+</html>
